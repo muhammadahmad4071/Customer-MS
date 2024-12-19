@@ -1,12 +1,11 @@
 <?php
 
-
+session_start();
 $dbObj = new DbClass();
 
 $login = $_SESSION['login'];
 $action = $_POST['action'];
 
-// var_dump($action);exit;
 if ($action == "ADD") {
     $Name = $_POST['name'];
     $ContactNo = $_POST['contactNo'];
