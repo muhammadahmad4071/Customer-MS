@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ?php
+    function calculateCost($hours) {
+        $baseCost = 450;
+        $additionalCostPerHour = 250;
+
+        if ($hours <= 1) {
+            return $baseCost;
+        } else {
+            $additionalHours = $hours - 1;
+            $additionalCost = $additionalHours * $additionalCostPerHour;
+            return $baseCost + $additionalCost;
+        }
+    }
+
+    // Example usage:
+    $selectedHours = 2; // You can replace this with the actual number of hours selected
+    $totalCost = calculateCost($selectedHours);
+
+    echo "Total cost for $selectedHours hours: $totalCost";
+    ?>
+
+    <h1>Hi</h1>
+</body>
+</html>
